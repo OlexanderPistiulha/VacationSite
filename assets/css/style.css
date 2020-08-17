@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Nunito:wght@400;600&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.first-screen {
+  width: 100%;
+  min-height: 100vh;
+  padding: 75px 0;
+}
+
+.first-screen__body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo__img {
+  width: 179px;
+  height: 50px;
+}
+
+.menu-desktop__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-desktop__link {
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.015em;
+  color: #bab8b8;
+  padding-right: 66px;
+}
+
+.menu-desktop__item:last-child {
+  padding-right: 47px;
+}
+
+.menu-desktop__active {
+  color: #4497f3;
+}
+
+.menu-desktop__button {
+  display: inline-block;
+  font-family: NunitoSans;
+  padding: 19px 47px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #3984f3;
+  border: 3px solid #3984f3;
+}
+/*# sourceMappingURL=style.css.map */
