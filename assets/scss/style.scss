@@ -4,6 +4,10 @@
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 40px;
+
+    @media screen and (max-width: 500px) {
+        padding: 0 20px;
+    }
 }
 
 // ------------------------------------------first-screen------------------------------------------
@@ -11,6 +15,10 @@
     width: 100%;
     min-height: 100vh;
     padding: 55px 0;
+
+    @media screen and (max-width: 1000px) {
+        padding: 20px 0;
+    }
 
     &__body {
         min-height: 100vh;
@@ -83,32 +91,58 @@
 }
 
 .menu-mobile {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(217, 230, 247);
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    display: none;
+    &__active {
+        opacity: 1;
+    }
 
-    &__list {}
+    &__list {
+        text-align: center;
+    }
 
-    &__link {}
+    &__link {
+        font-family: Nunito;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 0.015em;
+        color: #fffefe;       
+    }
 
-    &__active {}
+    &__item {
+        padding-bottom: 30px;
+    }
 
-    &__item {}
-
-    &__button {}
+    &__button {
+        cursor: pointer;
+        display: inline-block;
+        font-family: NunitoSans;
+        padding: 19px 47px;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        color: #3984f3;
+        border: 3px solid #3984f3;
+    }
 }
-
-.menumobilep {
-
-    &__item {}
-}
-
 
 .burger {
     height: 30px;
     width: 40px;
     display: none;
     position: relative;
-    //right: 40px;
+    z-index: 2000;
     cursor: pointer;
 
     @media screen and (max-width: 1000px) {
@@ -121,7 +155,6 @@
         width: 40px;
         height: 5px;
         background-color: $primary-color;
-        //transition: .5s;
     }
 
     &__line-one {
@@ -140,19 +173,15 @@
         transition: .5s;
     }
 
-
     &__one-active {
         top: 36%;
         transform: rotate(45deg);
         border-radius: 20px;
-
     }
 
     &__two-active {
         background-color: rgba(255, 255, 255, 0);
         transform: translateX(-100%);
-        // width: 0;
-
     }
 
     &__three-active {
