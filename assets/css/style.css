@@ -23,10 +23,16 @@ ul {
   padding-left: 0;
 }
 
+.conteiner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
 .first-screen {
   width: 100%;
   min-height: 100vh;
-  padding: 75px 0;
+  padding: 55px 0;
 }
 
 .first-screen__body {
@@ -66,6 +72,12 @@ ul {
   height: 50px;
 }
 
+@media screen and (max-width: 1000px) {
+  .menu-desktop {
+    display: none;
+  }
+}
+
 .menu-desktop__list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -90,6 +102,12 @@ ul {
   padding-right: 66px;
 }
 
+@media screen and (max-width: 1050px) {
+  .menu-desktop__link {
+    padding-right: 35px;
+  }
+}
+
 .menu-desktop__item:last-child {
   padding-right: 47px;
 }
@@ -99,6 +117,7 @@ ul {
 }
 
 .menu-desktop__button {
+  cursor: pointer;
   display: inline-block;
   font-family: NunitoSans;
   padding: 19px 47px;
@@ -106,5 +125,71 @@ ul {
   letter-spacing: 0.01em;
   color: #3984f3;
   border: 3px solid #3984f3;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+.burger {
+  height: 30px;
+  width: 40px;
+  display: none;
+  position: relative;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  .burger {
+    display: block;
+  }
+}
+
+.burger__line {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 5px;
+  background-color: #3984f3;
+}
+
+.burger__line-one {
+  top: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.burger__line-two {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.burger__line-three {
+  bottom: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.burger__one-active {
+  top: 36%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-radius: 20px;
+}
+
+.burger__two-active {
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.burger__three-active {
+  bottom: 50%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  border-radius: 20px;
 }
 /*# sourceMappingURL=style.css.map */

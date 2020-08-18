@@ -1,12 +1,16 @@
 @import "_common-style";
 
-.conteiner {}
+.conteiner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
 
 // ------------------------------------------first-screen------------------------------------------
 .first-screen {
     width: 100%;
     min-height: 100vh;
-    padding: 75px 0;
+    padding: 55px 0;
 
     &__body {
         min-height: 100vh;
@@ -33,6 +37,10 @@
 
 .menu-desktop {
 
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
+
     &__list {
         display: flex;
         justify-content: space-between;
@@ -48,6 +56,10 @@
         letter-spacing: 0.015em;
         color: #bab8b8;
         padding-right: 66px;
+
+        @media screen and (max-width: 1050px) {
+            padding-right: 35px;
+        }
     }
 
     &__item:last-child {
@@ -59,12 +71,93 @@
     }
 
     &__button {
+        cursor: pointer;
         display: inline-block;
         font-family: NunitoSans;
         padding: 19px 47px;
         font-weight: 600;
         letter-spacing: 0.01em;
         color: #3984f3;
-        border: 3px solid #3984f3;       
+        border: 3px solid #3984f3;
+    }
+}
+
+.menu-mobile {
+
+    display: none;
+
+    &__list {}
+
+    &__link {}
+
+    &__active {}
+
+    &__item {}
+
+    &__button {}
+}
+
+.menumobilep {
+
+    &__item {}
+}
+
+
+.burger {
+    height: 30px;
+    width: 40px;
+    display: none;
+    position: relative;
+    //right: 40px;
+    cursor: pointer;
+
+    @media screen and (max-width: 1000px) {
+        display: block;
+    }
+
+    &__line {
+        position: absolute;
+        display: block;
+        width: 40px;
+        height: 5px;
+        background-color: $primary-color;
+        //transition: .5s;
+    }
+
+    &__line-one {
+        top: 0;
+        transition: .5s;
+    }
+
+    &__line-two {
+        top: 50%;
+        transform: translateY(-50%);
+        transition: .5s;
+    }
+
+    &__line-three {
+        bottom: 0;
+        transition: .5s;
+    }
+
+
+    &__one-active {
+        top: 36%;
+        transform: rotate(45deg);
+        border-radius: 20px;
+
+    }
+
+    &__two-active {
+        background-color: rgba(255, 255, 255, 0);
+        transform: translateX(-100%);
+        // width: 0;
+
+    }
+
+    &__three-active {
+        bottom: 50%;
+        transform: rotate(-45deg);
+        border-radius: 20px;
     }
 }
