@@ -430,6 +430,12 @@ ul {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .amazing-places__body {
+    right: 20px;
+  }
+}
+
 .amazing-places__content {
   width: 40%;
 }
@@ -468,6 +474,16 @@ ul {
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@media screen and (max-width: 1400px) {
+  .slider__img {
+    height: 430px;
+  }
 }
 
 .owl-dots {
@@ -512,6 +528,9 @@ ul {
 
 .center {
   position: relative;
-  top: -30px;
+  top: -70px;
+  overflow: visible;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 /*# sourceMappingURL=style.css.map */
