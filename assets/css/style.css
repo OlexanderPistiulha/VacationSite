@@ -45,13 +45,13 @@ ul {
 .first-screen {
   width: 100%;
   min-height: 100vh;
-  padding: 55px 0;
+  padding-top: 55px;
   position: relative;
 }
 
 @media screen and (max-width: 1550px) {
   .first-screen {
-    padding: 20px 0;
+    padding-top: 20px;
   }
 }
 
@@ -148,7 +148,7 @@ ul {
 }
 
 .menu-desktop__active {
-  color: #4497f3;
+  color: #3984f3;
 }
 
 .menu-desktop__button {
@@ -391,5 +391,127 @@ ul {
   .bg__img {
     height: 70vh;
   }
+}
+
+.amazing-places {
+  padding-top: 170px;
+  padding-bottom: 170px;
+  min-height: 800px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1920px) {
+  .amazing-places {
+    position: relative;
+  }
+}
+
+.amazing-places__body {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media screen and (max-width: 1920px) {
+  .amazing-places__body {
+    position: absolute;
+    left: -78px;
+    right: 180px;
+  }
+}
+
+.amazing-places__content {
+  width: 40%;
+}
+
+.amazing-places__tittle {
+  font-family: NunitoSans;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #091e40;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.amazing-places__line {
+  width: 78px;
+  height: 6px;
+  background-color: #3984f3;
+  margin-bottom: 50px;
+}
+
+.amazing-places__subtittle {
+  font-family: NunitoSans;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #81858e;
+}
+
+.slider-wrapp {
+  width: 55%;
+}
+
+.slider__img {
+  width: 372px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.owl-dots {
+  display: none;
+}
+
+.owl-nav {
+  margin: 78px auto 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 110px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.owl-prev {
+  width: 39px;
+  height: 28px;
+  opacity: 0.5;
+  background-image: url(../img/arrow.png);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.owl-next {
+  width: 39px;
+  height: 28px;
+  opacity: 0.5;
+  background-image: url(../img/arrow.png);
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+  opacity: 1;
+}
+
+.center {
+  position: relative;
+  top: -30px;
 }
 /*# sourceMappingURL=style.css.map */
