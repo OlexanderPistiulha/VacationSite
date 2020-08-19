@@ -359,6 +359,7 @@ ul {
   background-color: #3984f3;
   font-family: NunitoSans;
   font-size: 20px;
+  border: white 2px solid;
   font-weight: 600;
   letter-spacing: 0.01em;
   color: #ffffff;
