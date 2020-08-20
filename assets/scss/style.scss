@@ -41,6 +41,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 56px;
 }
 
 .logo {
@@ -113,6 +114,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    &__logo {
+        margin-bottom: 56px;
+    }
 
     &__active {
         opacity: 1;
@@ -223,10 +228,10 @@
     &__tittle {
         font-family: NunitoSans;
         font-size: 75px;
-        // line-height: 80px;
         font-weight: 800;
         letter-spacing: 0.04em;
         color: $tittle-color;
+        margin-bottom: 56px;
 
         @media screen and (max-width: 1100px) {
             font-size: 55px;
@@ -240,6 +245,7 @@
         font-weight: 400;
         letter-spacing: 0.01em;
         color: #81858e;
+        margin-bottom: 56px;
 
         @media screen and (max-width: 1100px) {
             color: #494a4e;
@@ -295,10 +301,7 @@
     padding-top: 170px;
     padding-bottom: 170px;
     min-height: 800px;
-    width: 100%;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
+    width: 100%;  
 
     @media screen and (max-width: 1920px) {
         position: relative;
@@ -314,11 +317,8 @@
         }
 
         @media screen and (max-width: 1200px) {
-           
             right: 20px;
-
         }
-
 
         width: 100%;
         display: flex;
@@ -332,8 +332,7 @@
 
     &__tittle {
         font-family: NunitoSans;
-        font-size: 50px;
-        // line-height: 30px;
+        font-size: 50px;       
         font-weight: 600;
         letter-spacing: 0.02em;
         color: $tittle-color;
@@ -350,11 +349,11 @@
 
     &__subtittle {
         font-family: NunitoSans;
-        font-size: 22px;
-        // line-height: 42px;
+        font-size: 22px;      
         font-weight: 400;
         letter-spacing: 0.01em;
         color: #81858e;
+        margin-bottom: 24px;
     }
 
 }
@@ -365,9 +364,28 @@
 
 .slider {
 
-    &__slide {}
+    &__slide {
+        position: relative;
+    }
 
-    &__img {
+    &__price-wrapp {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 10px 30px;      
+        background-color: $primary-color;
+    }
+
+    &__price {
+        font-family: NunitoSans;
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        color: #ffffff;
+    }
+
+    &__img {     
         width: 372px;
         height: 400px;
         object-fit: cover;
@@ -377,11 +395,6 @@
         @media screen and (max-width: 1400px) {
             height: 430px;
         }
-
-        // @media screen and (max-width: 1200px) {
-        //     transform: none;
-        // }
-
     }
 }
 
@@ -429,6 +442,5 @@
     // }
 }
 
-// .center>.slider__slide>.slider__img {
-//     transform: translateY(10px);
-// }
+.center>.slider__slide>.slider__price-wrapp {
+    display: inline-block;
