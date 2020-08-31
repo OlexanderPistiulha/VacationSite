@@ -674,4 +674,87 @@ h2 {
   letter-spacing: 0.01em;
   color: #81858e;
 }
+
+.player {
+  position: relative;
+  max-width: 1000px;
+  width: 60%;
+  height: 600px;
+}
+
+.player__video {
+  width: 100%;
+  height: 100%;
+}
+
+.player__play {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.player__play-hide {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.player__play-img {
+  width: 85px;
+  height: 85px;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.player__play-img:hover {
+  width: 90px;
+  height: 90px;
+}
+
+.player__stop {
+  display: none;
+}
+
+.player__progress-wrapp {
+  display: none;
+}
+
+.player__progress {
+  display: none;
+}
+
+.player__progress-bar {
+  display: none;
+}
+
+.player__mute {
+  display: none;
+}
+
+.player__volins {
+  display: none;
+}
+
+.player__voldec {
+  display: none;
+}
+
+.player__full-screen {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */
