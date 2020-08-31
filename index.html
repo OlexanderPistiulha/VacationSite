@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="assets/libs/ScrollBar/css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="assets/libs/OwlCarousel/owl.carousel.css">
-    <!-- <link rel="stylesheet" href="assets/libs/OwlCarousel/owl.theme.default.min.css"> -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -170,12 +169,38 @@
                         vulputate tempor augue a efficitur urna, ultrices eu. Duis vel turpis et arcu.
                     </p>
                 </div>
+
+
+                <figure class="player" id="videoContainer" data-fullscreen="false">
+                    <video class="player__video" id="video" controls preload="metadata" poster="assets/img/poster.jpg">
+                        <source
+                            src="http://iandevlin.github.io/mdn/video-player/video/tears-of-steel-battle-clip-medium.mp4"
+                            type="video/mp4">
+                    </video>
+
+                    <div class="player__cotrols-wrapp" id="video-controls" class="controls" data-state="hidden">
+                        <button class="player__play" id="playpause" type="button" data-state="play">Play/Pause</button>
+                        <button class="player__stop" id="stop" type="button" data-state="stop">Stop</button>
+                        <div class="player__progress-wrapp" class="progress">
+                            <progress class="player__progress" id="progress" value="0" min="0">
+                                <span class="player__progress-bar" id="progress-bar"></span>
+                            </progress>
+                        </div>
+                        <button class="player__mute" id="mute" type="button" data-state="mute">Mute/Unmute</button>
+                        <button class="player__volins" id="volinc" type="button" data-state="volup">Vol+</button>
+                        <button class="player__voldec" id="voldec" type="button" data-state="voldown">Vol-</button>
+                        <button class="player__full-screen" id="fs" type="button"
+                            data-state="go-fullscreen">Fullscreen</button>
+                    </div>
+
+                </figure>
             </div>
         </section>
 
 
     </div>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/video-player.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="assets/libs/ScrollBar/jquery/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="assets/libs/OwlCarousel/owl.carousel.min.js"></script>
