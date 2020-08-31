@@ -686,10 +686,10 @@ h2 {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .player {
@@ -703,14 +703,13 @@ h2 {
 .player__video {
   width: 100%;
   height: 100%;
-}
-
-.player__video[poster] {
-  height: 600px;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .player__play {
   position: absolute;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
@@ -736,6 +735,12 @@ h2 {
 }
 
 .player__play-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 11;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 85px;
   height: 85px;
   cursor: pointer;
@@ -781,6 +786,7 @@ h2 {
 }
 
 .video-list {
+  padding-right: 20px;
   height: 100%;
   width: 400px;
   overflow: hidden;
@@ -793,5 +799,9 @@ h2 {
   height: 200px;
   margin-bottom: 40px;
   background-color: green;
+}
+
+.video-list__item:last-child {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=style.css.map */

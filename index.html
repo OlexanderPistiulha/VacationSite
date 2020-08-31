@@ -197,7 +197,7 @@
                         </div>
                     </div>
 
-                    <div class="video-list">
+                    <div id="my-scrollbar-two" class="video-list">
                         <div class="video-list__item">efee</div>
                         <div class="video-list__item">efefe</div>
                         <div class="video-list__item">efef</div>
@@ -224,6 +224,10 @@
             $(window).load(function () {
 
                 $("body").mCustomScrollbar({
+                    theme: "minimal-dark"
+                });
+
+                $(".video-list").mCustomScrollbar({
                     theme: "minimal-dark"
                 });
 
