@@ -879,6 +879,13 @@ h2 {
 }
 
 @media screen and (max-width: 700px) {
+  .video-list__img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
   .video-list__content {
     text-align: center;
   }
@@ -890,6 +897,12 @@ h2 {
   font-weight: 600;
   letter-spacing: 0.01em;
   color: #091e40;
+}
+
+@media screen and (max-width: 700px) {
+  .video-list__tittle {
+    margin-bottom: 10px;
+  }
 }
 
 .video-list__time {

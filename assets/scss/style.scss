@@ -668,6 +668,11 @@
         object-fit: fill;
         margin-right: 21px;
 
+        @media screen and (max-width: 700px) {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
     }
 
     &__content {
@@ -682,6 +687,10 @@
         font-weight: 600;
         letter-spacing: 0.01em;
         color: $tittle-color;
+
+        @media screen and (max-width: 700px) {
+            margin-bottom: 10px;
+        }
     }
 
     &__time {
