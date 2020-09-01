@@ -665,7 +665,8 @@ h2 {
 }
 
 .videos__subtittle {
-  width: 80%;
+  max-width: 1300px;
+  width: 100%;
   margin: 0 auto;
   font-family: NunitoSans;
   font-size: 22px;
@@ -673,23 +674,42 @@ h2 {
   font-weight: 400;
   letter-spacing: 0.01em;
   color: #81858e;
-  margin-bottom: 100px;
+  margin-bottom: 45px;
 }
 
 .videos__content-wrapp {
-  height: 500px;
+  height: 490px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+@media screen and (max-width: 1200px) {
+  .videos__content-wrapp {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .player {
@@ -698,6 +718,14 @@ h2 {
   width: 60%;
   height: 100%;
   margin-right: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  .player {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
 }
 
 .player__video {
@@ -788,9 +816,22 @@ h2 {
 .video-list {
   padding-right: 20px;
   height: 100%;
-  width: 500px;
+  width: 550px;
   overflow: hidden;
   overflow-y: scroll;
+}
+
+@media screen and (max-width: 1200px) {
+  .video-list {
+    height: 300px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .video-list {
+    height: 400px;
+  }
 }
 
 .video-list__item {
@@ -808,6 +849,21 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  padding: 12px;
+}
+
+@media screen and (max-width: 700px) {
+  .video-list__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.video-list__item:hover {
+  background-color: #98989811;
 }
 
 .video-list__item:last-child {
@@ -820,7 +876,12 @@ h2 {
   -o-object-fit: fill;
      object-fit: fill;
   margin-right: 21px;
-  padding: 12px;
+}
+
+@media screen and (max-width: 700px) {
+  .video-list__content {
+    text-align: center;
+  }
 }
 
 .video-list__tittle {
