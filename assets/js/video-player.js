@@ -111,8 +111,10 @@
 				if (type == 'playpause') {
 					if (video.paused || video.ended) {
 						playpause.setAttribute('data-state', 'play');
+						document.querySelector(".player__play-img").style.opacity = '1';
 					} else {
 						playpause.setAttribute('data-state', 'pause');
+						document.querySelector(".player__play-img").style.opacity = '0';
 					}
 				}
 				// Mute button
@@ -135,11 +137,36 @@
 			// Add events for all buttons			
 			playpause.addEventListener('click', function (e) {
 
-				document.querySelector(".player__play-img").classList.toggle("player__play-hide");
-
 				if (video.paused || video.ended) video.play();
 				else video.pause();
 			});
+
+
+			// for video list (this is only script for list)
+
+			const videoList = document.querySelector('.video-list');
+			let videoItems = document.querySelectorAll('.video-list__item');
+			let videoPlayer = document.querySelector('.player__video');
+
+			videoList.addEventListener('click', toggleDone);
+
+			function toggleDone(event) {
+
+				let myDiv = event.target.closest('.video-list__item');
+
+				if (!myDiv) return;
+
+				videoItems.forEach(item => item.classList.remove("video-list__active"));
+
+				myDiv.classList.toggle("video-list__active");
+
+				videoPlayer.poster = myDiv.dataset.img;
+				videoPlayer.src = myDiv.dataset.video;
+
+				console.log(myDiv.dataset.video);
+				console.log(myDiv);
+			}
+
 
 			// The Media API has no 'stop()' function, so pause the video and reset its time and the progress bar
 			// stop.addEventListener('click', function (e) {

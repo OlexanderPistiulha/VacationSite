@@ -903,5 +903,7 @@ h2 {
 
 .video-list__active {
   background-color: #98989834;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 /*# sourceMappingURL=style.css.map */
