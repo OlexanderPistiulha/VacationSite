@@ -919,4 +919,14 @@ h2 {
   -webkit-transition: .5s;
   transition: .5s;
 }
+
+.experiences {
+  width: 100%;
+  margin-bottom: 100%;
+}
+
+.experiences__body {
+  width: 100%;
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */
