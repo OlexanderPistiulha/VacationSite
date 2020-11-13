@@ -101,7 +101,7 @@
 }
 
 .menu-mobile {
-    opacity: 0;
+    visibility: hidden;
     position: fixed;
     top: 0;
     left: 0;
@@ -300,12 +300,16 @@
 .amazing-places {
     padding-top: 170px;
     // padding-bottom: 170px;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
     min-height: 800px;
     width: 100%;
 
     @media screen and (max-width: 1920px) {
         position: relative;
+    }
+
+    @media screen and (max-width: 1160px) {
+        margin-bottom: 100px;
     }
 
     @media screen and (max-width: 800px) {
@@ -379,6 +383,22 @@
         margin: 0 auto;
     }
 }
+
+.slider-wrapp-two {
+    position: relative;
+    left: -15%;
+    right: -5%;
+    width: 130%;
+
+    @media screen and (max-width: 1160px) {
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
+
 
 .slider {
 
@@ -472,11 +492,17 @@
     opacity: 1;
 }
 
+.owl-item {
+    filter: grayscale(50%);
+    top: 0;
+    transition: top .7s;
+}
+
 .center {
+    filter: grayscale(0%);
     position: relative;
     top: -70px;
     overflow: visible;
-    transition: .5s;
 }
 
 .center>.slider__slide>.slider__price-wrapp {
@@ -506,7 +532,7 @@
     }
 
     &__subtittle {
-        max-width: 1300px;
+        // max-width: 1300px;
         width: 100%;
         margin: 0 auto;
         font-family: NunitoSans;
@@ -711,11 +737,10 @@
 
 .experiences {
     width: 100%;
-    margin-bottom: 100%;
+    margin-bottom: 100px;
 
     &__body {
         width: 100%;
         text-align: center;
     }
 }
-

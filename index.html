@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="my-scrollbar">
+<body>
     <div class="wrapper">
 
         <section class="first-screen">
@@ -95,7 +95,7 @@
                 <div class="amazing-places__body">
 
                     <div class="slider-wrapp">
-                        <div class="owl-carousel slider">
+                        <div class="owl-carousel slider slider-one">
 
                             <div class="slider__slide">
                                 <img src="assets/img/slide-one.png" alt="" class="slider__img">
@@ -263,7 +263,48 @@
                         pulvinar libero. Ut elit elit, fringilla a nisi ut, dapibus eleifend quam.”
                     </p>
 
-              
+                    <div class="slider-wrapp-two">
+                        <div class="owl-carousel slider slider-two">
+
+                            <div class="slider__slide">
+                                <img src="assets/img/one.jpg" alt="" class="slider__img">
+                                <p class="slider__place-name">Place on Earth</p>
+                            </div>
+                            <div class="slider__slide">
+                                <img src="assets/img/two.jpg" alt="" class="slider__img">
+                                <p class="slider__place-name">Place on Earth</p>
+                            </div>
+                            <div class="slider__slide">
+                                <img src="assets/img/three.jpg" alt="" class="slider__img">
+                                <p class="slider__place-name">Place on Earth</p>
+                            </div>
+                            <div class="slider__slide">
+                                <img src="assets/img/four.jpg" alt="" class="slider__img">
+                                <p class="slider__place-name">Place on Earth</p>
+                            </div>
+                            <div class="slider__slide">
+                                <img src="assets/img/five.jpg" alt="" class="slider__img">                               
+                                <p class="slider__place-name">Place on Earth</p>
+                            </div>
+                            <div class="slider__slide">
+                                <img src="assets/img/six.jpg" alt="" class="slider__img">                               
+                                <p class="slider__place-name">Place on Earth</p>
+                            </div>
+                            <div class="slider__slide">
+                                <img src="assets/img/seven.jpg" alt="" class="slider__img">                               
+                                <p class="slider__place-name">Place on Earth</p>
+                            </div>
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+
 
                 </div>
             </div>
@@ -274,9 +315,9 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/video-player.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="assets/libs/ScrollBar/jquery/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- <script src="assets/libs/ScrollBar/jquery/jquery.mCustomScrollbar.concat.min.js"></script> -->
     <script src="assets/libs/OwlCarousel/owl.carousel.min.js"></script>
-    <script>
+    <!-- <script>
         (function ($) {
             $(window).load(function () {
 
@@ -290,11 +331,11 @@
 
             });
         })(jQuery);
-    </script>
+    </script> -->
 
     <script>
         $(document).ready(function () {
-            $('.owl-carousel').owlCarousel({
+            $('.slider-one').owlCarousel({
                 center: true,
                 loop: true,
                 margin: 38,
@@ -313,9 +354,34 @@
                     }
                 }
             });
+            $('.slider-two').owlCarousel({
+                center: true,
+                loop: true,
+                margin: 38,
+                nav: true,
+                smartSpeed: 750,
+                responsive: {
+                    0: {
 
+                        items: 1
+                    },
+                    800: {
+                        items: 2
+                    },
+                    1200: {
+                        items: 5
+                    }
+                }
+            });
         });
     </script>
+    <!-- <script>
+       $(document).ready(function () {
+           
+        });
+    </script> -->
+
+
 
 </body>
 

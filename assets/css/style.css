@@ -9,6 +9,7 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 * {
@@ -180,7 +181,7 @@ h2 {
 }
 
 .menu-mobile {
-  opacity: 0;
+  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -418,7 +419,7 @@ h2 {
 
 .amazing-places {
   padding-top: 170px;
-  margin-bottom: 100px;
+  margin-bottom: 0px;
   min-height: 800px;
   width: 100%;
 }
@@ -426,6 +427,12 @@ h2 {
 @media screen and (max-width: 1920px) {
   .amazing-places {
     position: relative;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .amazing-places {
+    margin-bottom: 100px;
   }
 }
 
@@ -521,6 +528,22 @@ h2 {
 @media screen and (max-width: 1160px) {
   .slider-wrapp {
     width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.slider-wrapp-two {
+  position: relative;
+  left: -15%;
+  right: -5%;
+  width: 130%;
+}
+
+@media screen and (max-width: 1160px) {
+  .slider-wrapp-two {
+    width: 100%;
+    left: 0;
+    right: 0;
     margin: 0 auto;
   }
 }
@@ -630,12 +653,20 @@ h2 {
   opacity: 1;
 }
 
+.owl-item {
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+  top: 0;
+  -webkit-transition: top .7s;
+  transition: top .7s;
+}
+
 .center {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
   position: relative;
   top: -70px;
   overflow: visible;
-  -webkit-transition: .5s;
-  transition: .5s;
 }
 
 .center > .slider__slide > .slider__price-wrapp {
@@ -665,7 +696,6 @@ h2 {
 }
 
 .videos__subtittle {
-  max-width: 1300px;
   width: 100%;
   margin: 0 auto;
   font-family: NunitoSans;
@@ -922,7 +952,7 @@ h2 {
 
 .experiences {
   width: 100%;
-  margin-bottom: 100%;
+  margin-bottom: 100px;
 }
 
 .experiences__body {
