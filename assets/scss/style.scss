@@ -1,4 +1,7 @@
+@import "_font";
+@import "_variables";
 @import "_common-style";
+@import "_scrollbar";
 
 .conteiner {
     max-width: 1600px;
@@ -16,8 +19,6 @@
     min-height: 100vh;
     padding-top: 55px;
     position: relative;
-
-
 
     @media screen and (max-width: 1550px) {
         padding-top: 20px;
