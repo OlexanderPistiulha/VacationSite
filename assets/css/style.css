@@ -47,6 +47,29 @@ h2 {
   background-color: #3984f3;
 }
 
+/* width */
+::-webkit-scrollbar {
+  margin: 10px;
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b4b3b3;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7e7d7d;
+}
+
 .conteiner {
   max-width: 1600px;
   margin: 0 auto;
