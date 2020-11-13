@@ -149,7 +149,7 @@ function renderCanvas() {
 
     // Clear scene
     context.clearRect(0, 0, $canvas.width(), $canvas.height());
-    context.fillStyle = '#fff';
+    context.fillStyle = 'transparent';
     context.fillRect(0, 0, $canvas.width(), $canvas.height());
 
     // Move points

@@ -117,7 +117,6 @@ button:active {
   bottom: -50px;
   left: -50px;
   z-index: 1;
-  background-color: #ea39f3;
 }
 
 .conteiner {
@@ -278,6 +277,7 @@ button:active {
 }
 
 .menu-mobile {
+  opacity: 0;
   visibility: hidden;
   position: fixed;
   top: 0;
@@ -312,7 +312,8 @@ button:active {
 }
 
 .menu-mobile__active {
-  opacity: 1;
+  opacity: 1000;
+  visibility: visible;
   z-index: 1000;
 }
 

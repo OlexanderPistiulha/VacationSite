@@ -115,6 +115,7 @@
 }
 
 .menu-mobile {
+    opacity: 0;
     visibility: hidden;
     position: fixed;
     top: 0;
@@ -134,7 +135,8 @@
     }
 
     &__active {
-        opacity: 1;
+        opacity: 1000;
+        visibility: visible;
         z-index: 1000;
     }
 
