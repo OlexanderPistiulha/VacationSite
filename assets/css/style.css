@@ -47,6 +47,26 @@ h2 {
   background-color: #3984f3;
 }
 
+button {
+  display: inline-block;
+  border: none;
+}
+
+button:hover,
+button:focus {
+  background: none;
+}
+
+button:focus {
+  outline: none;
+  outline-offset: none;
+}
+
+button:active {
+  -webkit-transform: none;
+          transform: none;
+}
+
 /* width */
 ::-webkit-scrollbar {
   margin: 10px;
@@ -68,6 +88,36 @@ h2 {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #7e7d7d;
+}
+
+.btn-liquid {
+  display: inline-block;
+  position: relative;
+  border-radius: 0%;
+  color: #fff;
+  font-family: NunitoSans;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn-liquid .inner {
+  display: block;
+  position: relative;
+  margin: 19px 45px;
+  z-index: 2;
+}
+
+.btn-liquid canvas {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  bottom: -50px;
+  left: -50px;
+  z-index: 1;
+  background-color: #ea39f3;
 }
 
 .conteiner {
@@ -148,6 +198,21 @@ h2 {
   height: 50px;
 }
 
+.menu-desktop {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @media screen and (max-width: 1000px) {
   .menu-desktop {
     display: none;
@@ -196,11 +261,20 @@ h2 {
   cursor: pointer;
   display: inline-block;
   font-family: NunitoSans;
+  font-weight: 400;
   padding: 19px 47px;
   font-weight: 600;
   letter-spacing: 0.01em;
   color: #3984f3;
   border: 3px solid #3984f3;
+  background-color: #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.menu-desktop__button:hover {
+  background: #3984f3;
+  color: #fff;
 }
 
 .menu-mobile {
@@ -1045,7 +1119,7 @@ h2 {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 
 .rights__copyright {
@@ -1076,6 +1150,13 @@ h2 {
   margin: 0 11px 22px 11px;
   width: 40px;
   height: 40px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.icons__item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .icons__link {

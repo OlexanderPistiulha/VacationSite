@@ -46,3 +46,23 @@ h2 {
     background-color: $primary-color;
 }
 
+
+button {
+    display: inline-block;
+    border: none;
+  
+}
+
+button:hover,
+button:focus {
+    background: none;
+}
+
+button:focus {
+    outline: none;
+    outline-offset: none;
+}
+
+button:active {
+    transform: none;
+}
